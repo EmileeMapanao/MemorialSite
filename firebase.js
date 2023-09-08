@@ -13,33 +13,18 @@ const firebaseConfig = {
    firebase.initializeApp(firebaseConfig);
 
    //reference your database
-   var db = firebase.database()
+   const db = firebase.database();
 
    function save() {
     var name = document.getElementById('tbName').value;
     var comment = document.getElementById('txComment').value;
 
-    db.ref('users/' + name).set({
+    db.ref('users/').push().set({
         name : name,
         comment : comment
-
-        
-
     })
     alert('Saved')
    }
 
-   document.getElementById("newcomment").addEventListener("submit",submitForm);
+
    
-   function submitForm(e){
-    e.preventDefault();
-
-    var name = getElementVal('tbName');
-    var comment = getElementVal('txComment');
-
-    console.log(name, comment);
-   }
-
-   const getElementVal = (id) => {
-    return document.getElementById(id).value;
-   };

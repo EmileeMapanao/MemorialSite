@@ -9,7 +9,6 @@
 <body>
     <div id="allcomments">
         <h3>Comments</h3>
-        <!--Show comments that have already been made-->
         <ul id="pastcomments"></ul>
         <form id="newcomment">
             <label for="tbName">Name</label>
@@ -18,9 +17,9 @@
             <br>
             <label for="txComment">Input Text</label>
             <br>
-            <textarea id="txComment" maxlength="4096" required></textarea>
+            <textarea type="text" id="txComment" maxlength="4096" required></textarea>
             <br>
-            <button id="submit" onclick="save()"> SUBMIT </button>
+            <button id="submit" onclick="save()"> Submit </button>
         </form>
     </div>
     
