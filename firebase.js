@@ -13,7 +13,21 @@ const firebaseConfig = {
    firebase.initializeApp(firebaseConfig);
 
    //reference your database
-   var memorialSiteDB = firebase.database().ref("MemorialSite");
+   var db = firebase.database()
+
+   function save() {
+    var name = getElementVal('tbName');
+    var comment = getElementVal('txComment');
+
+    database.ref('users/' + name).set({
+        name: name,
+        comment: comment
+
+        
+
+    })
+    alert('Saved')
+   }
 
    document.getElementById("newcomment").addEventListener("submit",submitForm);
    
