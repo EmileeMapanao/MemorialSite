@@ -16,12 +16,12 @@ const firebaseConfig = {
    var db = firebase.database()
 
    function save() {
-    var name = getElementVal('tbName');
-    var comment = getElementVal('txComment');
+    var name = document.getElementById('tbName').value;
+    var comment = document.getElementById('txComment').value;
 
-    database.ref('users/' + name).set({
-        name: name,
-        comment: comment
+    db.ref('users/' + name).set({
+        name : name,
+        comment : comment
 
         
 
