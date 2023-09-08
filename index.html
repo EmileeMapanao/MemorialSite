@@ -26,7 +26,7 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
-        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+        import { getDatabase, ref, child, set, get, push } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
         // Import the functions you need from the SDKs you need
        
@@ -50,16 +50,15 @@
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
- 
-        const commentsRef = database.child('comments');
-        document.getElementById('btnSubmitComment').addEventListener('click', function(){
-            var newcomment = document.getElementById('txComment').value.replace(/\n/g,"<br>");
+        const rootRef = ref(database);
+       
+        document.getElementById("btnSubmitComment").addEventListener("click", function() {
+            var newComment = document.getElementById('txComment').value;
 
-            var newPostRef = commentsRef.push();
-            newPostRef.set({
+            var newPostRef = push(child(rootRef, 'memorialWebsite'));
+            set(rootRef, 'comments')({
                 name: document.getElementById('tbName').value.trim(),
-                comment: newComment.trim(),
-                when: firebase.database.ServerValue.TIMESTAMP
+                comment: newComment.trim()
             });
         });
       </script>
