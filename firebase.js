@@ -18,28 +18,38 @@ const firebaseConfig = {
    function save() {
     var name = document.getElementById('tbName').value;
     var comment = document.getElementById('txComment').value;
+    //reads comment, if empty asks user to fill block
+    if (document.getElementById('txComment').value.length == 0){
+      alert ('Please enter a message.');
+    }
 
-    db.ref('users/' + name).set({
-        name : name,
+    
+    if (!document.getElementById('tbName').value == 0) { 
+      db.ref('users/' + name).push({
         comment : comment
-
-        
-
     })
     alert('Saved')
+    }
+    
+    // if user enters name, no push to database
+    // if user does not enter name, pushses anon to db
    }
 
-   document.getElementById("newcomment").addEventListener("submit",submitForm);
+   function get() {
+    var username = document.getElementById('tbName').value
+    var user_ref = db.ref('users/' + tbName)
+    user_ref.on('value', function(snapshot){
+      var data = snapshot.val()
+
+      console.log(data)
+    })
+  }
    
-   function submitForm(e){
-    e.preventDefault();
+  function update() {
+    var comment = document.getElementById('txComment').value
+    var updates = {
+      comment : comment
 
-    var name = getElementVal('tbName');
-    var comment = getElementVal('txComment');
-
-    console.log(name, comment);
-   }
-
-   const getElementVal = (id) => {
-    return document.getElementById(id).value;
-   };
+    }
+  }
+   
