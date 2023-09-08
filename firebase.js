@@ -14,42 +14,62 @@ const firebaseConfig = {
 
    //reference your database
    var db = firebase.database()
+   const ref = db.ref("messages")
 
-   function save() {
-    var name = document.getElementById('tbName').value;
-    var comment = document.getElementById('txComment').value;
+   //function save() {
+    //var name = document.getElementById('tbName').value;
+    //var comment = document.getElementById('txComment').value;
+    //var newComment = document.getElementById('newcomment').value;
     //reads comment, if empty asks user to fill block
-    if (document.getElementById('txComment').value.length == 0){
-      alert ('Please enter a message.');
-    }
 
-    
-    if (!document.getElementById('tbName').value == 0) { 
-      db.ref('users/' + name).push({
-        comment : comment
-    })
-    alert('Saved')
-    }
+      //db.ref('users/').push({
+       // name : name,
+      //  comment : comment,
+      //  newComment : newComment
+    //})
+    //alert('Saved')
+  
     
     // if user enters name, no push to database
     // if user does not enter name, pushses anon to db
-   }
+   //}
 
-   function get() {
-    var username = document.getElementById('tbName').value
-    var user_ref = db.ref('users/' + tbName)
-    user_ref.on('value', function(snapshot){
-      var data = snapshot.val()
+  // function get() {
+  //  var username = document.getElementById('tbName').value
+   // var user_ref = db.ref('users/' + tbName)
+  //  user_ref.on('value', function(snapshot){
+  //    var data = snapshot.val()
 
-      console.log(data)
-    })
-  }
+  //    console.log(data)
+   // })
+//  }
    
-  function update() {
-    var comment = document.getElementById('txComment').value
-    var updates = {
-      comment : comment
+  //function update() {
+  //  var comment = document.getElementById('txComment').value
+  //  var updates = {
+  //    comment : comment
+//
+ //   }
+ // }
 
-    }
-  }
+ function save(){
+  const form = document.getElementById('newcomment');
+
+  form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const name = document.getElementById('tbName').value
+    const text = document.getElementById('txComment').value
+
+    ref.push({
+      name : name,
+      text: text,
+
+    })
+
+    alert('Saved')
+    console.log(name, text)
+    form.reset
+  })
+}
+
    
