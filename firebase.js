@@ -9,8 +9,9 @@ const firebaseConfig = {
   measurementId: "G-7N1DDTDBLV"
 };
 
-// Add anon button
-// order comments from newest to oldest
+// prevent user from leaving name blank
+// order comments from newest to oldest\
+
 
 
 // Initialize Firebase
@@ -23,12 +24,12 @@ const ref = db.ref("messages")
 function save() {
   const form = document.getElementById('newcomment');
   form.addEventListener("submit", (e) => {
-    if (document.getElementById('anon').checked){
-      name = 'anonymous'
+    if (!document.getElementById('anon').checked){
+      e.preventDefault();
+      var name = document.getElementById('tbName').value
     }
     else {
-    e.preventDefault();
-    var name = document.getElementById('tbName').value
+      name = 'anonymous'
     }
     const text = document.getElementById('txComment').value
 
