@@ -5,26 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
 </head>
 
 <body>
+    
+    <div class="container">
+        <h1 class="Title">Memorial Site</h1>
+        <h2 class="titleh2">Brandon Cooper</h2>
+        <h3 class="titleh3"><img src="images/Brandon1.jpg"></h3>
     <div id="allcomments">
+        
         <form id="newcomment">
-            <label for="tbName">Name</label>
+            <div class="form-box">
+            <label for="tbName"></label>
             <input type ="checkbox" id="anon" name="anonymous" value="anonymous">
             <label for="anon">Anonymous</label>
             <br>
-            <input id="tbName" type="text" maxLength="20" value="Name">
+            <input id="tbName" type="text" maxLength="20" placeholder="Name">
             <br>
             <label for="txComment">Input Text</label>
             <br>
             <textarea type="text" id="txComment" maxlength="4096" required></textarea>
             <br>
             <button type="submit" onclick="save()"> Submit </button>
-            <ul id="pastcomments"></ul>
+            <ul class="ulisted" id="pastcomments"></ul>
+        </div>
         </form>
     </div>
+    </div>
+</div>
 
     <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
