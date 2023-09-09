@@ -9,9 +9,8 @@ const firebaseConfig = {
   measurementId: "G-7N1DDTDBLV"
 };
 
-// Add anon button
-// order comments from newest to oldest
 
+// order comments from newest to oldest\
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -20,31 +19,49 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.database()
 const ref = db.ref("messages")
 
+// default to name being required
+document.getElementById('tbName').required = true;
+
+// Disabled name tb if anonymous checkbox is ticked
+function checkAnon() {
+  if (document.getElementById('anon').checked == false) {
+    document.getElementById("tbName").disabled = false;
+  }
+  else {
+    document.getElementById('tbName').required = false;
+    document.getElementById("tbName").disabled = true;
+  }
+}
+
+
+// Submit form and push to server
 function save() {
   const form = document.getElementById('newcomment');
   form.addEventListener("submit", (e) => {
-    if (document.getElementById('anon').checked){
-      name = 'anonymous'
+    e.preventDefault()
+    const text = document.getElementById('txComment').value  // get comment
+    if (document.getElementById('anon').checked == false) {
+      var name = document.getElementById('tbName').value  // get name if not anon
     }
     else {
-    e.preventDefault();
-    var name = document.getElementById('tbName').value
+      name = 'anonymous'
     }
-    const text = document.getElementById('txComment').value
-
+    if (name == "" && message == ""){  
+      // ignore double form submission
+    }
+    else {
     ref.push({
       name: name,
       text: text,
       when: firebase.database.ServerValue.TIMESTAMP
-
     })
-
+  }
     alert('Saved')
     console.log(name, text)
     form.reset()
   })
 }
-
+// Pull data from server and display on page
 function showPastComments() {
   var showat = document.getElementById('pastcomments');
   var commentsRef = firebase.database().ref('messages/');
