@@ -21,9 +21,7 @@ var db = firebase.database()
 const ref = db.ref("messages")
 
 function save() {
-  console.log('save was clicked');
   const form = document.getElementById('newcomment');
-
   form.addEventListener("submit", (e) => {
     if (document.getElementById('anon').checked){
       name = 'anonymous'
@@ -48,7 +46,6 @@ function save() {
 }
 
 function showPastComments() {
-  console.log('yes showPastComments() is running')
   var showat = document.getElementById('pastcomments');
   var commentsRef = firebase.database().ref('messages/');
   commentsRef.once('value', function (snapshot) {
