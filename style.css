@@ -1,58 +1,131 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+    
 }
+
+
 
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #152677, #4e085f);
-    padding: 20px;
+    background: #fff;
+    padding: .000001%;
 }
 
-.Title{
-    width:100%;
-    text-align:center;
-    
 
-}
 
 .titleh2{
-    font-size: 12px;
+    font-size: 12%;
     text-align:center;
+    width:100%;
 }
 
 img{
     display: block;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 10px;
-    width: 25%;
+    margin-top: .5%;
+    
+    width: 60%;
     align-items: center;
+    border-radius: 1%;
 }
+ul{
+    transform: rotate(180deg);
+}
+li {
+    padding-top: 10%;
+    padding: 20%;
+    width: 100%;
+    max-width: 740px;
+    
+}
+ul > li {
+    display:inline-block;
+    border:1px solid #676767;
+    padding: 20px;
+    transform: rotate(-180deg);
+    background:#fff;
+    border-radius: 1%;
+}
+
+.centered {
+    position: absolute;
+    bottom: 52%;
+    right: 220px;
+    font-size: 45px;
+    transform: translate(-50%, -50%);
+    color:white;
+    
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .centered h1{
+    font-size:12px;
+    font-family: 'Raleway', sans-serif;
+  }
 
 .form-box{
     display: block;
     align-items: center;
     width: 100%;
-    max-width: 600px;
-    background: #edeef0;
+    max-width: 1000px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px 90px 70px;
+    padding: 1% 1% 1%;
     border-radius: 10px;
     
 }
 
-.ulisted{
-    list-style-position: inside;
+.form-box button{
+    border: none;
+    outline: none;
+    margin-top:5px;
+    width: 825px;
     width: 100%;
-    max-width: 540px;
-    background: #fff;
-    margin: 100px auto 10px;
-    padding: 40px 30px 40px;
-    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background: #ff5945; 
+    color: #fff;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 20px;
 }
+
+.ulisted{
+    
+    
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background:#edeef0; 
+    text-align: center;
+    border-radius: 20px;
+    margin:20px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background:transparent;
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }

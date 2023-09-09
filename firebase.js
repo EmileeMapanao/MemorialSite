@@ -49,12 +49,12 @@ function showPastComments() {
   var showat = document.getElementById('pastcomments');
   var commentsRef = firebase.database().ref('messages/');
   commentsRef.once('value', function (snapshot) {
-    snapshot.forEach(function (itemSnapshot) {
+   var com = snapshot.forEach(function (itemSnapshot) {
       var itemData = itemSnapshot.val();
       var comment = itemData.text;
       var name = itemData.name;
       var when = new Date(itemData.when).toLocaleDateString("en-us");
-      showat.innerHTML += "<li>" + comment + "<span> --" + name + " (" + when + ") </span></li>";
+      showat.innerHTML += "<li>" + comment + "<br><br>" + "<span> <strong>" + name + " (" + when + ") </strong> </span></li>";
     })
   })
 }
