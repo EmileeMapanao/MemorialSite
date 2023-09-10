@@ -64,7 +64,7 @@ ul > li {
 
 .centered {
     position: absolute;
-    bottom: 15%;
+    bottom: 40%;
     right: 1%;
     font-size: 60px;
     transform: translate(-50%, -50%);
