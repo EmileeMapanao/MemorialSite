@@ -8,16 +8,19 @@
 
 
 
+
 .container{
     width: 100%;
     min-height: 100vh;
     background: #fff;
     padding: .000001%;
 }
-
+/* comment*/
 .container1{
    
-   margin: 1%; 
+   margin: .5%; 
+   float:left;
+   width: 50%;
 }
 
 
@@ -30,7 +33,7 @@
 
 .titleh3{
     margin-top:1%;
-    background-color: #ccc;
+    background-color: rgb(220,220,220); 
     padding:1%;
 }
 
@@ -57,11 +60,11 @@ li {
 }
 ul > li {
     display:inline-block;
-    border:1px solid #676767;
+    border:1px solid black;
     padding: 20px;
     transform: rotate(-180deg);
     background:#fff;
-    border-radius: 1%;
+    border-radius: 2%;
 }
 
 .centered {
@@ -100,33 +103,47 @@ ul > li {
     padding: 12px;
     margin-bottom: 15px;
     margin-top: 15px;
-    background: #ff5945; 
+    background:rgb(112,128,144); 
     color: #fff;
     font-size: 16px;
     cursor:pointer;
     border-radius: 20px;
 }
 
+.button:visited{
+    background:red;
+}
+
 .ulisted{
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    background:#edeef0; 
+    background:rgb(220,220,220); 
     text-align: center;
     border-radius: 20px;
     margin:20px;
 }
 
-.tbName{
+/*Name text box */
+.tbName {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #ccc;
+    padding: 2%;
+    margin-left:1%;
+    border: 2px solid rgb(112,128,144);
     border-radius: 4px;
-    background-color: #f8f8f8;   
+    background-color: #f8f8f8;
 }
-.anon{
-    float:right;
+
+.anonymous {
+    margin-left: 2%;
+    margin-top: 2%;
 }
+
+.checkbox {
+    margin-right:5%;
+}
+
+
 
 textarea {
     width: 100%;
@@ -134,7 +151,7 @@ textarea {
     padding: 12px;
     margin: 10px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid rgb(112,128,144);
     border-radius: 4px;
     background-color: #f8f8f8;
     font-size: 16px;

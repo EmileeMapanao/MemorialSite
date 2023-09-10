@@ -55,12 +55,17 @@ function save() {
       text: text,
       when: firebase.database.ServerValue.TIMESTAMP
     })
+    //alters button when form submitted
+    changeButton()
   }
-    alert('Saved')
+  
     console.log(name, text)
     form.reset()
   })
 }
+
+
+
 // Pull data from server and display on page
 function showPastComments() {
   var showat = document.getElementById('pastcomments');
@@ -76,3 +81,10 @@ function showPastComments() {
   })
 }
 showPastComments()
+
+//button change
+function changeButton(){
+var btn = document.getElementById("btn");
+btn.value = 'my value'; // will just add a hidden value
+btn.innerHTML = 'Submitted!';
+}
