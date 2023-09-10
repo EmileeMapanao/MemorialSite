@@ -58,7 +58,7 @@ function save() {
     //alters button when form submitted
     changeButton()
   }
-  
+
     console.log(name, text)
     form.reset()
   })
