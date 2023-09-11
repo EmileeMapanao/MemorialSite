@@ -8,57 +8,50 @@
     <link rel="stylesheet" href="style.css">
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:ital,wght@0,500;1,200&family=Roboto:wght@300;700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:ital,wght@0,500;1,200&family=Roboto:wght@300;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-    
-    
+
+
     <div class="container">
-        
-        
-        <h3 class="titleh3"><img src="images/Brandon1edit(1).jpg"></h3>
-        <div class="centered">Brandon Cooper<br>
-            <h1 class="Title">Please use this webpage to share stories or messages</h1>
+
+
+        <h3 class="titleh3"><img src="images/Brandon.png"></h3>
+        <div class="centered"><br>
+            <h1 class="Title"></h1>
         </div>
-
-       
-
-
-    <div id="allcomments">
-        
-        <form id="newcomment">
-            <div class="form-box">
-            <label for="tbName"></label>
-            
-            <div class="container1">
-            <input id="tbName" class="tbName" type="text" placeholder="Enter name here" maxLength="40" >
+        <div id="allcomments">
+            <form id="newcomment">
+                <div class="form-box">
+                    <label for="tbName"></label>
+                    <div class="container1">
+                        <input id="tbName" class="tbName" type="text" placeholder="Enter name" maxLength="40">
+                    </div>
+                    <input type="checkbox" class="anonymous" onclick="checkAnon()" id="anon" /><label for="anon">
+                        Anonymous</label>
+                    <label for="txComment"></label>
+                    <br>
+                    <textarea type="text" id="txComment" rows="5" cols="45" maxlength="4096"
+                        placeholder="Write a message" required></textarea>
+                    <br>
+                    <button id="btn" class="button" type="submit" onclick="save()"> Submit </button>
+                    <ul class="ulisted" id="pastcomments"></ul>
+                </div>
+            </form>
         </div>
-         <input type ="checkbox" class="anonymous" onclick="checkAnon()" id="anon" /><label for="anon"> Anonymous</label>
-        
-            
-            <label for="txComment"></label>
-            <br>
-            <textarea type="text" id="txComment" rows="5" cols="45" maxlength="4096" placeholder="Write a message here" required></textarea>
-            <br>
-            
-            <button id="btn" class="button" type="submit" onclick="save()"> Submit </button>
-
-            
-        
-            <ul class="ulisted" id="pastcomments" ></ul>
-        </div>
-        </form>
     </div>
     </div>
-</div>
 
     <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
     <script src="firebase.js"></script>
+    <center><text class="credit">Made for our best friend by Michael and Emilee</text></center>
 </body>
 
 </html>

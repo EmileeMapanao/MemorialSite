@@ -1,64 +1,67 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background: #fff;
     padding: .000001%;
 }
+
 /* comment*/
-.container1{
-   
-   margin: .5%; 
-   float:left;
-   width: 50%;
+.container1 {
+    margin: .5%;
+    float: left;
+    width: 50%;
 }
 
-.titleh2{
+.titleh2 {
     font-size: 12%;
-    text-align:center;
-    width:100%;
+    text-align: center;
+    width: 100%;
 }
 
-.titleh3{
-    margin-top:1%;
-    background-color: rgb(220,220,220); 
-    padding:1%;
+.titleh3 {
+    margin-top: 1%;
+    background-color: rgb(220, 220, 220);
+    padding: 1%;
 }
 
-img{
+img {
     display: block;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: .5%;
     width: 100%;
     max-width: 1200px;
-    height:550px; 
+    height: 550px;
     align-items: center;
     border-radius: 1%;
     object-fit: cover;
 }
-ul{
+
+ul {
     transform: rotate(180deg);
 }
+
 li {
     padding-top: 10%;
     padding: 20%;
     width: 100%;
     max-width: 740px;
-    
+
 }
-ul > li {
-    display:inline-block;
-    border:1px solid black;
+
+ul>li {
+    display: inline-block;
+    border: 1px solid black;
     padding: 20px;
     transform: rotate(-180deg);
-    background:#fff;
+    background: #fff;
     border-radius: 2%;
 }
 
@@ -68,16 +71,16 @@ ul > li {
     right: 1%;
     font-size: 60px;
     transform: translate(-50%, -50%);
-    color:white;
+    color: white;
     font-family: 'Raleway', sans-serif;
-  }
+}
 
-  .centered h1{
-    font-size:12px;
+.centered h1 {
+    font-size: 12px;
     font-family: 'Raleway', sans-serif;
-  }
+}
 
-.form-box{
+.form-box {
     display: block;
     align-items: center;
     width: 100%;
@@ -87,46 +90,48 @@ ul > li {
     margin-right: auto;
     padding: 1% 1% 1%;
     border-radius: 10px;
-    
+
 }
 
-.form-box button{
+.form-box button {
     border: none;
     outline: none;
-    margin-top:5px;
+    margin-top: 5px;
     width: 102%;
     padding: 12px;
     margin-bottom: 15px;
     margin-top: 15px;
-    background:rgb(112,128,144); 
+    background: rgb(112, 128, 144);
     color: #fff;
     font-size: 16px;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 20px;
 }
+
 .button:hover {
-    background:rgb(124, 138, 151); 
-}
-.button:visited{
-    background:red;
+    background: rgb(124, 138, 151);
 }
 
-.ulisted{
+.button:visited {
+    background: red;
+}
+
+.ulisted {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    background:rgb(220,220,220); 
+    background: rgb(220, 220, 220);
     text-align: center;
     border-radius: 20px;
-    margin:20px;
+    margin: 20px;
 }
 
 /*Name text box */
 .tbName {
     width: 100%;
     padding: 2%;
-    margin-left:1%;
-    border: 2px solid rgb(112,128,144);
+    margin-left: 1%;
+    border: 2px solid rgb(112, 128, 144);
     border-radius: 4px;
     background-color: #f8f8f8;
 }
@@ -137,7 +142,7 @@ ul > li {
 }
 
 .checkbox {
-    margin-right:5%;
+    margin-right: 5%;
 }
 
 textarea {
@@ -146,9 +151,12 @@ textarea {
     padding: 12px;
     margin: 10px;
     box-sizing: border-box;
-    border: 2px solid rgb(112,128,144);
+    border: 2px solid rgb(112, 128, 144);
     border-radius: 4px;
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
-  }
+}
+.credit {
+    color: rgb(177, 177, 177);
+}
