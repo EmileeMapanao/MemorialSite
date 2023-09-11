@@ -36,13 +36,30 @@ img{
     margin-left:auto;
     margin-right:auto;
     margin-top: .5%;
-    width: 100%;
-    max-width: 1200px;
-    height:550px; 
+    width: 80%;
     align-items: center;
     border-radius: 1%;
     object-fit: cover;
+    position:relative;
 }
+
+.parent {
+    position: relative;
+}
+
+.parent .box {
+    position: absolute;
+    width: calc(1.6vw + 10px); height: calc(1.6vw + 10px);
+    border-radius: 50%;
+    background-color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+
 ul{
     transform: rotate(180deg);
 }
@@ -66,7 +83,7 @@ ul > li {
     position: absolute;
     bottom: 40%;
     right: 1%;
-    font-size: 60px;
+    font-size: 400%;
     transform: translate(-50%, -50%);
     color:white;
     font-family: 'Raleway', sans-serif;
@@ -75,6 +92,7 @@ ul > li {
   .centered h1{
     font-size:12px;
     font-family: 'Raleway', sans-serif;
+    position:absolute;
   }
 
 .form-box{
