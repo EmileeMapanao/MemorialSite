@@ -9,9 +9,6 @@ const firebaseConfig = {
   measurementId: "G-7N1DDTDBLV"
 };
 
-
-// order comments from newest to oldest\
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -44,34 +41,32 @@ function save() {
       var name = document.getElementById('tbName').value  // get name if not anon
     }
     else {
-      name = 'anonymous'
+      name = 'Anonymous'
     }
-    if (name == "" && message == ""){  
+    if (name == "" && message == "") {
       // ignore double form submission
     }
     else {
-    ref.push({
-      name: name,
-      text: text,
-      when: firebase.database.ServerValue.TIMESTAMP
-    })
-    //alters button when form submitted
-    changeButton()
-  }
+      ref.push({
+        name: name,
+        text: text,
+        when: firebase.database.ServerValue.TIMESTAMP
+      })
+      //alters button when form submitted
+      changeButton()
+    }
 
     console.log(name, text)
     form.reset()
   })
 }
 
-
-
 // Pull data from server and display on page
 function showPastComments() {
   var showat = document.getElementById('pastcomments');
   var commentsRef = firebase.database().ref('messages/');
   commentsRef.once('value', function (snapshot) {
-   var com = snapshot.forEach(function (itemSnapshot) {
+    var com = snapshot.forEach(function (itemSnapshot) {
       var itemData = itemSnapshot.val();
       var comment = itemData.text;
       var name = itemData.name;
@@ -83,8 +78,8 @@ function showPastComments() {
 showPastComments()
 
 //button change
-function changeButton(){
-var btn = document.getElementById("btn");
-btn.value = 'my value'; // will just add a hidden value
-btn.innerHTML = 'Submitted!';
+function changeButton() {
+  var btn = document.getElementById("btn");
+  btn.value = 'my value'; // will just add a hidden value
+  btn.innerHTML = 'Submitted!';
 }
