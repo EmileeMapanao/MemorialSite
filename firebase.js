@@ -7,6 +7,14 @@ const firebaseConfig = {
   messagingSenderId: "16043005500",
   appId: "1:16043005500:web:0e8ff885d5ec884e5f1539",
   measurementId: "G-C8WKGPL5Y6"
+  apiKey: "AIzaSyBAP2HgXx-voygp6a1bLk_J0GiW7Q1TcEM",
+  authDomain: "brandonswebsite-93312.firebaseapp.com",
+  databaseURL: "https://brandonswebsite-93312-default-rtdb.firebaseio.com",
+  projectId: "brandonswebsite-93312",
+  storageBucket: "brandonswebsite-93312.appspot.com",
+  messagingSenderId: "16043005500",
+  appId: "1:16043005500:web:0e8ff885d5ec884e5f1539",
+  measurementId: "G-C8WKGPL5Y6"
 };
 
 // Initialize Firebase
@@ -57,6 +65,8 @@ function save() {
     }
     form.reset()
     window.location.reload()
+    form.reset();
+    window.location.reload(); // auto refresh to display new comment
   })
 }
 
