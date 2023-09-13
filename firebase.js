@@ -6,7 +6,7 @@ const firebaseConfig = {
   storageBucket: "brandonswebsite-93312.appspot.com",
   messagingSenderId: "16043005500",
   appId: "1:16043005500:web:0e8ff885d5ec884e5f1539",
-  measurementId: "G-C8WKGPL5Y6"
+  measurementId: "G-C8WKGPL5Y6",
   apiKey: "AIzaSyBAP2HgXx-voygp6a1bLk_J0GiW7Q1TcEM",
   authDomain: "brandonswebsite-93312.firebaseapp.com",
   databaseURL: "https://brandonswebsite-93312-default-rtdb.firebaseio.com",
@@ -80,7 +80,7 @@ function showPastComments() {
       var comment = itemData.text;
       var name = itemData.name;
       var when = new Date(itemData.when).toLocaleDateString("en-us");
-      showat.innerHTML += "<li>" + comment + "<br><br>" + "<span> <strong>" + name + " (" + when + ") </strong> </span></li>";
+      showat.innerHTML += "<li>" + comment + "<br><br>" + "<span> <strong>" + name + "</strong><br>" + when + "  </span></li>";
     })
   })
 }

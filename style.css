@@ -4,6 +4,9 @@
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
+input[type="text"][disabled] {
+    background-color: rgba(190,190,190,.7);
+ }
 
 .container {
     width: 100%;
