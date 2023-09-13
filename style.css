@@ -29,24 +29,27 @@ input[type="text"][disabled] {
 
 .titleh3 {
     margin-top: 1%;
-    background-color: #14100fe3;
+    background-color: #cfcfc4;
     padding: 1%;
 }
 
-img {
+
+
+.titleh3 img{
+    max-width:72%;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: .5%;
-    width: 70%;
-    max-width: 70%;
-    height: 100%;
     align-items: center;
     border-radius: 1%;
     object-fit: cover;
+
 }
 
-ul {
+
+ul{
     transform: rotate(180deg);
     
     
@@ -60,11 +63,10 @@ li {
     border: 1px solid black;
     border-radius:2%;
     margin:0 auto;
-    
-
 }
 
-ul>li {
+
+ul>li{
     display: block;
     padding: 20px;
     transform: rotate(-180deg);
@@ -102,11 +104,11 @@ ul>li {
     border: none;
     outline: none;
     margin-top: 5px;
-    width: 102%;
-    padding: 12px;
+    width: 100%;
+    padding: 10px;
     margin-bottom: 15px;
     margin-top: 15px;
-    background: rgb(112, 128, 144);
+    background: #536878;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -129,7 +131,7 @@ ul>li {
 
     padding-left:5%;
     padding-right:5%;
-    background: rgb(220, 220, 220);
+    background-color: #cfcfc4;
     text-align: center;
     display: table;
     margin: 0 auto;
@@ -139,7 +141,7 @@ ul>li {
 .tbName {
     width: 100%;
     padding: 2%;
-    margin-left: 1%;
+    
     border: 2px solid rgb(112, 128, 144);
     border-radius: 4px;
     background-color: #f8f8f8;
@@ -158,7 +160,6 @@ textarea {
     width: 100%;
     height: 150px;
     padding: 12px;
-    margin: 10px;
     box-sizing: border-box;
     border: 2px solid rgb(112, 128, 144);
     border-radius: 4px;
