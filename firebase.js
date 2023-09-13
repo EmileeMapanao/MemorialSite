@@ -80,7 +80,7 @@ function showPastComments() {
       var comment = itemData.text;
       var name = itemData.name;
       var when = new Date(itemData.when).toLocaleDateString("en-us");
-      showat.innerHTML += "<li>" + comment + "<br><br>" + "<span> <strong>" + name + "</strong><br>" + when + "  </span></li>";
+      showat.innerHTML += "<li>" + comment + "<br><br>" + "<span> <strong>" + name + "</strong><br>" + when + "  </span></li> ";
     })
   })
 }
