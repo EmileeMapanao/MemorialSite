@@ -14,7 +14,6 @@
         href="https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:ital,wght@0,500;1,200&family=Roboto:wght@300;700&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
         <div class="titleh3">
@@ -28,11 +27,12 @@
                         href="https://supporting.afsp.org/index.cfm?fuseaction=donate.event&eventID=1&_ga=2.196179884.1857457840.1625596902-1487690552.1625596902">AFSP</a>
                 </div>
             </div>
-            <img src="images/Brandon(1).jpg" alt="Brandon">
+            <img src="images/BrandonCropped.jpg" alt="Brandon">
         </div>
         <div class="centered"><br>
             <h1 class="Title"></h1>
         </div>
+        
         <div id="allcomments">
             <form id="newcomment">
                 <div class="form-box">
@@ -47,26 +47,25 @@
                     <textarea type="text" id="txComment" rows="5" cols="45" maxlength="4096"
                         placeholder="Write a message" required></textarea>
                     <br>
-                    
+
                     <button id="btn" class="button" type="submit" onclick="save()"> Submit </button>
-                </form>
-            </div>
+            </form>
         </div>
-                    <div class="background">
-                    <ul 
-                         class="ulisted" id="pastcomments">
-                         
-                    </ul>
-                    <center><text class="credit">Made for our best friend by Michael and Emilee</text></center>    
-                
-                    
-        </div>
+    </div>
+    <div class="background">
+        <ul class="ulisted" id="pastcomments"></ul>
+        <center><text class="credit">Made for our best friend by Michael and Emilee <br>
+                For questions, comments or concerns please contact
+                <a href="mailto: emilee.mapanao@gmail.com"> Emilee </a></text></center>
+
+
+    </div>
     </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
     <script src="firebase.js"></script>
-    
+
 </body>
 
 </html>
